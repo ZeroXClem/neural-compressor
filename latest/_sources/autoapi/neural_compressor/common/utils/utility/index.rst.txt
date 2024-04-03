@@ -1,0 +1,86 @@
+:orphan:
+
+:py:mod:`neural_compressor.common.utils.utility`
+================================================
+
+.. py:module:: neural_compressor.common.utils.utility
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   neural_compressor.common.utils.utility.LazyImport
+   neural_compressor.common.utils.utility.CpuInfo
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   neural_compressor.common.utils.utility.singleton
+   neural_compressor.common.utils.utility.dump_elapsed_time
+   neural_compressor.common.utils.utility.set_random_seed
+   neural_compressor.common.utils.utility.set_workspace
+   neural_compressor.common.utils.utility.set_resume_from
+   neural_compressor.common.utils.utility.set_tensorboard
+   neural_compressor.common.utils.utility.log_quant_execution
+
+
+
+.. py:function:: singleton(cls)
+
+   Singleton decorator.
+
+
+.. py:class:: LazyImport(module_name)
+
+
+
+
+   Lazy import python module till use.
+
+
+.. py:class:: CpuInfo
+
+
+
+
+   CPU info collection.
+
+
+.. py:function:: dump_elapsed_time(customized_msg='')
+
+   Get the elapsed time for decorated functions.
+
+   :param customized_msg: The parameter passed to decorator. Defaults to None.
+   :type customized_msg: string, optional
+
+
+.. py:function:: set_random_seed(seed: int)
+
+   Set the random seed in config.
+
+
+.. py:function:: set_workspace(workspace: str)
+
+   Set the workspace in config.
+
+
+.. py:function:: set_resume_from(resume_from: str)
+
+   Set the resume_from in config.
+
+
+.. py:function:: set_tensorboard(tensorboard: bool)
+
+   Set the tensorboard in config.
+
+
+

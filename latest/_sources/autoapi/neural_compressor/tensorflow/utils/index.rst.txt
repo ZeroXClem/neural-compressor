@@ -1,0 +1,19 @@
+:orphan:
+
+:py:mod:`neural_compressor.tensorflow.utils`
+============================================
+
+.. py:module:: neural_compressor.tensorflow.utils
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   data/index.rst
+   model_wrappers/index.rst
+   nets_factory/index.rst
+
+

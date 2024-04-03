@@ -1,0 +1,40 @@
+:orphan:
+
+:py:mod:`neural_compressor.adaptor.keras`
+=========================================
+
+.. py:module:: neural_compressor.adaptor.keras
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   neural_compressor.adaptor.keras.KerasAdaptor
+   neural_compressor.adaptor.keras.KerasQuery
+
+
+
+
+.. py:class:: KerasAdaptor(framework_specific_info)
+
+
+
+
+   The keras class of framework adaptor layer.
+
+
+.. py:class:: KerasQuery(local_config_file=None)
+
+
+
+
+   Base class that defines Query Interface.
+
+   Each adaption layer should implement the inherited class for specific backend on their own.
+
+

@@ -1,0 +1,17 @@
+:orphan:
+
+:py:mod:`neural_compressor.torch.algorithms`
+============================================
+
+.. py:module:: neural_compressor.torch.algorithms
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   layer_wise/index.rst
+
+

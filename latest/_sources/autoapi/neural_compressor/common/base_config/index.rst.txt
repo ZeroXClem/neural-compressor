@@ -1,0 +1,84 @@
+:orphan:
+
+:py:mod:`neural_compressor.common.base_config`
+==============================================
+
+.. py:module:: neural_compressor.common.base_config
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   neural_compressor.common.base_config.ConfigRegistry
+   neural_compressor.common.base_config.BaseConfig
+   neural_compressor.common.base_config.ComposableConfig
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   neural_compressor.common.base_config.register_config
+   neural_compressor.common.base_config.get_all_config_set_from_config_registry
+   neural_compressor.common.base_config.register_supported_configs_for_fwk
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   neural_compressor.common.base_config.options
+
+
+
+.. py:function:: register_config(framework_name: str, algo_name: str, priority: Union[float, int] = 0)
+
+   Register config decorator.
+
+   The register the configuration classes for different algorithms within specific frameworks.
+
+   Usage example:
+       @register_config(framework_name=FRAMEWORK_NAME, algo_name=ExampleAlgorithm, priority=100)
+       class ExampleAlgorithmConfig:
+           # Configuration details for the ExampleAlgorithm
+
+   :param framework_name: the framework name.
+   :param algo_name: the algorithm name.
+   :param priority: the priority of the configuration. A larger number indicates a higher priority,
+                    which will be tried first at the auto-tune stage. Defaults to 0.
+
+
+.. py:class:: BaseConfig(white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST)
+
+
+
+
+   The base config for all algorithm configs.
+
+
+.. py:class:: ComposableConfig(configs: List[BaseConfig])
+
+
+
+
+   The base config for all algorithm configs.
+
+
+
+.. py:function:: register_supported_configs_for_fwk(fwk_name: str)
+
+   Register supported configs for specific framework.
+
+   :param fwk_name: the framework name.
+
+
+

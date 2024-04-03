@@ -1,0 +1,46 @@
+:orphan:
+
+:py:mod:`neural_compressor.onnxrt.utils`
+========================================
+
+.. py:module:: neural_compressor.onnxrt.utils
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   onnx_model/index.rst
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   neural_compressor.onnxrt.utils.ONNXModel
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   neural_compressor.onnxrt.utils.PRIORITY_RTN
+   neural_compressor.onnxrt.utils.PRIORITY_GPTQ
+   neural_compressor.onnxrt.utils.PRIORITY_AWQ
+   neural_compressor.onnxrt.utils.PRIORITY_SMOOTH_QUANT
+
+
+
+
+
+
+

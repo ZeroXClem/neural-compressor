@@ -1,0 +1,30 @@
+:orphan:
+
+:py:mod:`neural_compressor.torch.quantization.autotune`
+=======================================================
+
+.. py:module:: neural_compressor.torch.quantization.autotune
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   neural_compressor.torch.quantization.autotune.get_rtn_double_quant_config_set
+   neural_compressor.torch.quantization.autotune.get_all_config_set
+   neural_compressor.torch.quantization.autotune.autotune
+
+
+
+
+
+.. py:function:: autotune(model: torch.nn.Module, tune_config: neural_compressor.common.base_tuning.TuningConfig, eval_fn: Callable, eval_args=None, run_fn=None, run_args=None, example_inputs=None) -> Optional[torch.nn.Module]
+
+   The main entry of auto-tune.
+
+
