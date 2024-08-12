@@ -85,7 +85,7 @@
     "enhanced-resolve": "^5.10.0",
     "es-abstract": "^1.20.2",
     "es-to-primitive": "^1.2.1",
-    "fs": "^0.0.1-security",
+    "fs": "^0.0.2",
     "has": "^1.0.3",
     "icss-utils": "^5.1.0",
     "loader-utils": "^2.0.3",
