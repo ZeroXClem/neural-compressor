@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>neural_compressor.utils.utility &mdash; Intel® Neural Compressor 2.5 documentation</title>
+  <title>neural_compressor.utils.utility &mdash; Intel® Neural Compressor 3.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css" />
@@ -55,7 +55,6 @@
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../docs/source/get_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../docs/source/installation_guide.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../docs/source/user_guide.html">User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../docs/source/examples_readme.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../docs/source/api-doc/apis.html">APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../docs/source/releases_info.html">Release</a></li>
@@ -78,7 +77,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">neural_compressor.utils.utility</span></code></li>
+      <li class="breadcrumb-item active">neural_compressor.utils.utility</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../../_sources/autoapi/neural_compressor/utils/utility/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -89,16 +88,14 @@
            <div itemprop="articleBody">
              
   <section id="module-neural_compressor.utils.utility">
-<span id="neural-compressor-utils-utility"></span><h1><a class="reference internal" href="#module-neural_compressor.utils.utility" title="neural_compressor.utils.utility"><code class="xref py py-mod docutils literal notranslate"><span class="pre">neural_compressor.utils.utility</span></code></a><a class="headerlink" href="#module-neural_compressor.utils.utility" title="Permalink to this heading"></a></h1>
+<span id="neural-compressor-utils-utility"></span><h1>neural_compressor.utils.utility<a class="headerlink" href="#module-neural_compressor.utils.utility" title="Permalink to this heading"></a></h1>
 <p>Quantization auto-tuning config system.</p>
 <p>This file specifies default config options for quantization auto-tuning tool.
 User should not change values in this file. Instead, user should write a config
 file (in yaml) and use cfg_from_file(yaml_file) to load it and override the default
 options.</p>
-<section id="module-contents">
-<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
 <section id="classes">
-<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#neural_compressor.utils.utility.LazyImport" title="neural_compressor.utils.utility.LazyImport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LazyImport</span></code></a></p></td>
@@ -129,7 +126,7 @@ options.</p>
 </table>
 </section>
 <section id="functions">
-<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#neural_compressor.utils.utility.version1_lt_version2" title="neural_compressor.utils.utility.version1_lt_version2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">version1_lt_version2</span></code></a>(version1, version2)</p></td>
@@ -216,6 +213,12 @@ options.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#neural_compressor.utils.utility.dump_class_attrs" title="neural_compressor.utils.utility.dump_class_attrs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dump_class_attrs</span></code></a>(obj[, result])</p></td>
 <td><p>Dump the attributes and values of a config class.</p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#neural_compressor.utils.utility.deep_get" title="neural_compressor.utils.utility.deep_get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deep_get</span></code></a>(dictionary, keys[, default])</p></td>
+<td><p>Get the dot key's item in nested dict.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#neural_compressor.utils.utility.deep_set" title="neural_compressor.utils.utility.deep_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deep_set</span></code></a>(dictionary, keys, value)</p></td>
+<td><p>Set the dot key's item in nested dict.</p></td>
+</tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#neural_compressor.utils.utility.compare_objects" title="neural_compressor.utils.utility.compare_objects"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compare_objects</span></code></a>(obj1, obj2, ignore_attrs)</p></td>
 <td><p>Compare two objects and ignore the specified attributes.</p></td>
 </tr>
@@ -257,6 +260,9 @@ options.</p>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="neural_compressor.utils.utility.version1_lt_version2">
 <span class="sig-prename descclassname"><span class="pre">neural_compressor.utils.utility.</span></span><span class="sig-name descname"><span class="pre">version1_lt_version2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">version1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version2</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/utils/utility.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.utils.utility.version1_lt_version2" title="Permalink to this definition"></a></dt>
@@ -518,6 +524,51 @@ options.</p>
 </dl>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="neural_compressor.utils.utility.deep_get">
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.utils.utility.</span></span><span class="sig-name descname"><span class="pre">deep_get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dictionary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/utils/utility.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.utils.utility.deep_get" title="Permalink to this definition"></a></dt>
+<dd><p>Get the dot key’s item in nested dict.</p>
+<blockquote>
+<div><p>For example, person = {‘person’:{‘name’:{‘first’:’John’}}}
+deep_get(person, “person.name.first”) will output ‘John’.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dictionary</strong> (<em>dict</em>) – The dict object to get keys</p></li>
+<li><p><strong>keys</strong> (<em>dict</em>) – The deep keys</p></li>
+<li><p><strong>default</strong> (<em>object</em>) – The return item if key not exists</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the item of the deep dot keys</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>item</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="neural_compressor.utils.utility.deep_set">
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.utils.utility.</span></span><span class="sig-name descname"><span class="pre">deep_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dictionary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/utils/utility.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.utils.utility.deep_set" title="Permalink to this definition"></a></dt>
+<dd><p>Set the dot key’s item in nested dict.</p>
+<blockquote>
+<div><p>For example, person = {‘person’:{‘name’:{‘first’:’John’}}}
+deep_set(person, “person.sex”, ‘male’) will output
+{‘person’: {‘name’: {‘first’: ‘John’}, ‘sex’: ‘male’}}</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dictionary</strong> (<em>dict</em>) – The dict object to get keys</p></li>
+<li><p><strong>keys</strong> (<em>dict</em>) – The deep keys</p></li>
+<li><p><strong>value</strong> (<em>object</em>) – The value of the setting key</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="neural_compressor.utils.utility.DotDict">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neural_compressor.utils.utility.</span></span><span class="sig-name descname"><span class="pre">DotDict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/utils/utility.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.utils.utility.DotDict" title="Permalink to this definition"></a></dt>
@@ -772,7 +823,6 @@ options.</p>
 
 </section>
 </section>
-</section>
 
 
            </div>
@@ -788,7 +838,7 @@ options.</p>
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   <jinja2.runtime.BlockReference object at 0x7f0b3736a3e0> 
+   <jinja2.runtime.BlockReference object at 0x7f415c657580> 
   <p></p><div><a href='https://www.intel.com/content/www/us/en/privacy/intel-cookie-notice.html' data-cookie-notice='true'>Cookies</a> <a href='https://www.intel.com/content/www/us/en/privacy/intel-privacy-notice.html'>| Privacy</a></div>
 
 

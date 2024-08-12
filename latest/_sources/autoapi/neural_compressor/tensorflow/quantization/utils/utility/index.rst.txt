@@ -1,5 +1,5 @@
-:py:mod:`neural_compressor.tensorflow.quantization.utils.utility`
-=================================================================
+neural_compressor.tensorflow.quantization.utils.utility
+=======================================================
 
 .. py:module:: neural_compressor.tensorflow.quantization.utils.utility
 
@@ -9,16 +9,11 @@
 
 
 
-Module Contents
----------------
-
-
 Functions
-~~~~~~~~~
+---------
 
 .. autoapisummary::
 
-   neural_compressor.tensorflow.quantization.utils.utility.disable_random
    neural_compressor.tensorflow.quantization.utils.utility.read_graph
    neural_compressor.tensorflow.quantization.utils.utility.write_graph
    neural_compressor.tensorflow.quantization.utils.utility.is_ckpt_format
@@ -32,22 +27,15 @@ Functions
    neural_compressor.tensorflow.quantization.utils.utility.strip_equivalent_nodes
    neural_compressor.tensorflow.quantization.utils.utility.get_graph_def
    neural_compressor.tensorflow.quantization.utils.utility.get_model_input_shape
-   neural_compressor.tensorflow.quantization.utils.utility.get_tensor_val_from_graph_node
-   neural_compressor.tensorflow.quantization.utils.utility.int8_node_name_reverse
-   neural_compressor.tensorflow.quantization.utils.utility.tf_diagnosis_helper
    neural_compressor.tensorflow.quantization.utils.utility.generate_feed_dict
-   neural_compressor.tensorflow.quantization.utils.utility.get_weight_from_input_tensor
    neural_compressor.tensorflow.quantization.utils.utility.apply_inlining
    neural_compressor.tensorflow.quantization.utils.utility.construct_function_from_graph_def
    neural_compressor.tensorflow.quantization.utils.utility.parse_saved_model
    neural_compressor.tensorflow.quantization.utils.utility.reconstruct_saved_model
 
 
-
-.. py:function:: disable_random(seed=1)
-
-   A Decorator to disable tf random seed.
-
+Module Contents
+---------------
 
 .. py:function:: read_graph(in_graph, in_graph_is_binary=True)
 
@@ -163,47 +151,9 @@ Functions
    Get the input shape of the input model.
 
 
-.. py:function:: get_tensor_val_from_graph_node(graph_node_name_mapping, node_name)
-
-   Get the tensor value for given node name.
-
-   :param graph_node_name_mapping: key: node name, val: node
-   :param node_name: query node
-
-   :returns: numpy array
-   :rtype: tensor_val
-
-
-.. py:function:: int8_node_name_reverse(node)
-
-   Reverse int8 node name.
-
-
-.. py:function:: tf_diagnosis_helper(fp32_model, quan_model, tune_cfg, save_path)
-
-   Tensorflow diagnosis helper function.
-
-
 .. py:function:: generate_feed_dict(input_tensor, inputs)
 
    Generate feed dict helper function.
-
-
-.. py:function:: get_weight_from_input_tensor(model, input_tensor_names, op_types)
-
-   Extracts weight tensors and their associated nodes from a smooth quant node's input tensor.
-
-   :param model: A TensorFlow model containing a `graph_def` attribute.
-   :param input_tensor_names: A list of input tensor names to search for weight tensors.
-   :param op_types: A list of operation types to search for when looking for weight tensors.
-
-   :returns:
-
-             - sq_weight_tensors: A dictionary mapping each input tensor name
-                 to a dict of its associated weight tensors with weight name.
-             - sq_weights_nodes: A dictionary mapping each input tensor name
-                 to a dict of its associated weight nodes with weight name.
-   :rtype: A tuple of two dictionaries
 
 
 .. py:function:: apply_inlining(func)

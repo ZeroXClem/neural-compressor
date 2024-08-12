@@ -1,19 +1,16 @@
-:py:mod:`neural_compressor.tensorflow.utils.model_wrappers`
-===========================================================
+neural_compressor.tensorflow.utils.model_wrappers
+=================================================
 
 .. py:module:: neural_compressor.tensorflow.utils.model_wrappers
 
 .. autoapi-nested-parse::
 
-   Class for Tensorflow model.
+   The concrete model wrappers for parsing all TF model formats.
 
 
-
-Module Contents
----------------
 
 Classes
-~~~~~~~
+-------
 
 .. autoapisummary::
 
@@ -21,18 +18,17 @@ Classes
    neural_compressor.tensorflow.utils.model_wrappers.TensorflowBaseModel
    neural_compressor.tensorflow.utils.model_wrappers.TensorflowSavedModelModel
    neural_compressor.tensorflow.utils.model_wrappers.TensorflowLLMModel
-   neural_compressor.tensorflow.utils.model_wrappers.TensorflowQATModel
    neural_compressor.tensorflow.utils.model_wrappers.TensorflowCheckpointModel
    neural_compressor.tensorflow.utils.model_wrappers.KerasModel
    neural_compressor.tensorflow.utils.model_wrappers.TensorflowModel
 
 
-
 Functions
-~~~~~~~~~
+---------
 
 .. autoapisummary::
 
+   neural_compressor.tensorflow.utils.model_wrappers.get_tf_model_type
    neural_compressor.tensorflow.utils.model_wrappers.get_model_type
    neural_compressor.tensorflow.utils.model_wrappers.validate_graph_node
    neural_compressor.tensorflow.utils.model_wrappers.validate_and_inference_input_output
@@ -40,12 +36,20 @@ Functions
    neural_compressor.tensorflow.utils.model_wrappers.graph_def_session
    neural_compressor.tensorflow.utils.model_wrappers.frozen_pb_session
    neural_compressor.tensorflow.utils.model_wrappers.load_saved_model
+   neural_compressor.tensorflow.utils.model_wrappers.try_loading_keras
    neural_compressor.tensorflow.utils.model_wrappers.keras_session
    neural_compressor.tensorflow.utils.model_wrappers.slim_session
    neural_compressor.tensorflow.utils.model_wrappers.checkpoint_session
    neural_compressor.tensorflow.utils.model_wrappers.estimator_session
    neural_compressor.tensorflow.utils.model_wrappers.saved_model_session
 
+
+Module Contents
+---------------
+
+.. py:function:: get_tf_model_type(model)
+
+   The interface of getting type of tensorflow models.
 
 
 .. py:function:: get_model_type(model)
@@ -154,6 +158,23 @@ Functions
    :rtype: graph_def
 
 
+.. py:function:: try_loading_keras(model, input_tensor_names, output_tensor_names)
+
+   Try different ways of loading keras models.
+
+   :param model: model path or tf.keras.Model object.
+   :type model: string or tf.keras.Model
+   :param input_tensor_names: input tensor names of the model.
+   :type input_tensor_names: list of string
+   :param output_tensor_names: output tensor names of the model.
+   :type output_tensor_names: list of string
+
+   :returns: tf.compat.v1.Session object.
+             input_names (list of string): validated input names.
+             output_names (list of string): validated output names.
+   :rtype: graph_def (tf.compat.v1.Session)
+
+
 .. py:function:: keras_session(model, input_tensor_names, output_tensor_names, **kwargs)
 
    Build session with keras model.
@@ -243,12 +264,10 @@ Functions
 
 .. py:class:: BaseModel(model, **kwargs)
 
-
    Base class of all neural_compressor.model, will play graph role.
 
 
 .. py:class:: TensorflowBaseModel(model, **kwargs)
-
 
 
 
@@ -259,7 +278,6 @@ Functions
 
 
 
-
    Build Tensorflow saved model.
 
 
@@ -267,20 +285,10 @@ Functions
 
 
 
-
    The class Tensorflow saved model whose GraphDef exceeding maximum protobuf size of 2GB.
 
 
-.. py:class:: TensorflowQATModel(model='', **kwargs)
-
-
-
-
-   Build Tensorflow QAT model.
-
-
 .. py:class:: TensorflowCheckpointModel(model, **kwargs)
-
 
 
 
@@ -291,12 +299,10 @@ Functions
 
 
 
-
    Build Keras model.
 
 
 .. py:class:: TensorflowModel
-
 
 
 

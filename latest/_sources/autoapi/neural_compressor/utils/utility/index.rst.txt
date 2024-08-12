@@ -1,5 +1,5 @@
-:py:mod:`neural_compressor.utils.utility`
-=========================================
+neural_compressor.utils.utility
+===============================
 
 .. py:module:: neural_compressor.utils.utility
 
@@ -14,11 +14,8 @@
 
 
 
-Module Contents
----------------
-
 Classes
-~~~~~~~
+-------
 
 .. autoapisummary::
 
@@ -32,9 +29,8 @@ Classes
    neural_compressor.utils.utility.OpEntry
 
 
-
 Functions
-~~~~~~~~~
+---------
 
 .. autoapisummary::
 
@@ -66,6 +62,8 @@ Functions
    neural_compressor.utils.utility.set_tensorboard
    neural_compressor.utils.utility.show_memory_info
    neural_compressor.utils.utility.dump_class_attrs
+   neural_compressor.utils.utility.deep_get
+   neural_compressor.utils.utility.deep_set
    neural_compressor.utils.utility.compare_objects
    neural_compressor.utils.utility.alias_param
    neural_compressor.utils.utility.print_table
@@ -81,6 +79,8 @@ Functions
    neural_compressor.utils.utility.check_key_exist
 
 
+Module Contents
+---------------
 
 .. py:function:: version1_lt_version2(version1, version2)
 
@@ -108,7 +108,6 @@ Functions
 
 
 .. py:class:: LazyImport(module_name)
-
 
 
 
@@ -152,7 +151,6 @@ Functions
 
 
 .. py:class:: CpuInfo
-
 
 
 
@@ -217,14 +215,12 @@ Functions
 
 
 
-
    Not displayed in API Docs.
 
    Capture the output to file.
 
 
 .. py:class:: Statistics(data, header, field_names, output_handle=logger.info)
-
 
    The statistics printer.
 
@@ -233,12 +229,10 @@ Functions
 
 
 
-
    Mode: Quantization, Benchmark or Pruning.
 
 
 .. py:class:: GLOBAL_STATE
-
 
    Access the global model.
 
@@ -295,8 +289,41 @@ Functions
    :param result: An dict for recording attributes and values.
 
 
-.. py:class:: DotDict(value=None)
+.. py:function:: deep_get(dictionary, keys, default=None)
 
+   Get the dot key's item in nested dict.
+
+      For example, person = {'person':{'name':{'first':'John'}}}
+      deep_get(person, "person.name.first") will output 'John'.
+
+   :param dictionary: The dict object to get keys
+   :type dictionary: dict
+   :param keys: The deep keys
+   :type keys: dict
+   :param default: The return item if key not exists
+   :type default: object
+
+   :returns: the item of the deep dot keys
+   :rtype: item
+
+
+.. py:function:: deep_set(dictionary, keys, value)
+
+   Set the dot key's item in nested dict.
+
+      For example, person = {'person':{'name':{'first':'John'}}}
+      deep_set(person, "person.sex", 'male') will output
+      {'person': {'name': {'first': 'John'}, 'sex': 'male'}}
+
+   :param dictionary: The dict object to get keys
+   :type dictionary: dict
+   :param keys: The deep keys
+   :type keys: dict
+   :param value: The value of the setting key
+   :type value: object
+
+
+.. py:class:: DotDict(value=None)
 
 
 
@@ -406,7 +433,6 @@ Functions
 
 
 .. py:class:: OpEntry(op_name: str, mse: float, activation_min: float, activation_max: float)
-
 
    OP entry class.
 

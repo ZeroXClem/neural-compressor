@@ -1,26 +1,27 @@
-:orphan:
-
-:py:mod:`neural_compressor.torch.algorithms.weight_only.gptq`
-=============================================================
+neural_compressor.torch.algorithms.weight_only.gptq
+===================================================
 
 .. py:module:: neural_compressor.torch.algorithms.weight_only.gptq
 
+.. autoapi-nested-parse::
 
-Module Contents
----------------
+   GPTQ quantization.
+
+
 
 Classes
-~~~~~~~
+-------
 
 .. autoapisummary::
 
-   neural_compressor.torch.algorithms.weight_only.gptq.GPTQuantizer
+   neural_compressor.torch.algorithms.weight_only.gptq.RAWGPTQuantizer
    neural_compressor.torch.algorithms.weight_only.gptq.GPTQ
-
+   neural_compressor.torch.algorithms.weight_only.gptq.Quantizer
+   neural_compressor.torch.algorithms.weight_only.gptq.GPTQuantizer
 
 
 Functions
-~~~~~~~~~
+---------
 
 .. autoapisummary::
 
@@ -29,10 +30,10 @@ Functions
    neural_compressor.torch.algorithms.weight_only.gptq.find_layers
    neural_compressor.torch.algorithms.weight_only.gptq.find_layers_name
    neural_compressor.torch.algorithms.weight_only.gptq.log_quantizable_layers_per_transformer
-   neural_compressor.torch.algorithms.weight_only.gptq.quantize
-   neural_compressor.torch.algorithms.weight_only.gptq.gptq_quantize
 
 
+Module Contents
+---------------
 
 .. py:function:: is_leaf(module)
 
@@ -62,28 +63,22 @@ Functions
              }
 
 
-.. py:function:: find_layers(module, layers=[nn.Conv2d, nn.Conv1d, nn.Linear, transformers.Conv1D], name='')
+.. py:function:: find_layers(module, layers=SUPPORTED_LAYERS, name='')
 
    Get all layers with target types.
 
 
-.. py:function:: find_layers_name(module, layers=[nn.Conv2d, nn.Conv1d, nn.Linear, transformers.Conv1D], name='')
+.. py:function:: find_layers_name(module, layers=SUPPORTED_LAYERS, name='')
 
    Get all layers with target types.
 
 
-.. py:function:: log_quantizable_layers_per_transformer(transformer_blocks, layers=[nn.Conv2d, nn.Conv1d, nn.Linear, transformers.Conv1D])
+.. py:function:: log_quantizable_layers_per_transformer(transformer_blocks, layers=SUPPORTED_LAYERS)
 
    Print all layers which will be quantized in GPTQ algorithm.
 
 
-.. py:function:: quantize(x, scale, zero, maxq)
-
-   Do quantization.
-
-
-.. py:class:: GPTQuantizer(model, weight_config={}, dataloader=None, nsamples=128, use_max_length=True, max_seq_length=2048, device=None, export_compressed_model=False, use_layer_wise=False, model_path='', run_fn=None, *args, **kwargs)
-
+.. py:class:: RAWGPTQuantizer(model, weight_config={}, nsamples=128, use_max_length=True, max_seq_length=2048, device=None, use_layer_wise=False, model_path='', dataloader=None, *args, **kwargs)
 
 
 
@@ -96,13 +91,22 @@ Functions
 
 .. py:class:: GPTQ(layer, W, device='cpu')
 
+   Please refer to the following.
 
-   Please refer to:
    GPTQ: Accurate Post-training Compression for Generative Pretrained Transformers (https://arxiv.org/abs/2210.17323)
 
 
-.. py:function:: gptq_quantize(model, weight_config={}, dataloader=None, nsamples=128, max_seq_length=2048, use_max_length=True, device=None, export_compressed_model=False, use_layer_wise=False, model_path=None, run_fn=None, run_args=None)
+.. py:class:: Quantizer(shape=1)
 
-   Run weight-only quantization with.
+
+
+   Quantizer.
+
+
+.. py:class:: GPTQuantizer(quant_config={})
+
+
+
+   GPTQ Quantizer.
 
 

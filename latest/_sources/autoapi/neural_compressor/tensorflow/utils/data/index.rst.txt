@@ -1,5 +1,5 @@
-:py:mod:`neural_compressor.tensorflow.utils.data`
-=================================================
+neural_compressor.tensorflow.utils.data
+=======================================
 
 .. py:module:: neural_compressor.tensorflow.utils.data
 
@@ -9,25 +9,67 @@
 
 
 
-Module Contents
----------------
-
 Classes
-~~~~~~~
+-------
 
 .. autoapisummary::
 
+   neural_compressor.tensorflow.utils.data.IterableFetcher
+   neural_compressor.tensorflow.utils.data.IndexFetcher
+   neural_compressor.tensorflow.utils.data.IterableSampler
+   neural_compressor.tensorflow.utils.data.SequentialSampler
+   neural_compressor.tensorflow.utils.data.BatchSampler
    neural_compressor.tensorflow.utils.data.BaseDataLoader
    neural_compressor.tensorflow.utils.data.DummyDataset
    neural_compressor.tensorflow.utils.data.DummyDatasetV2
 
 
+Functions
+---------
+
+.. autoapisummary::
+
+   neural_compressor.tensorflow.utils.data.default_collate
+
+
+Module Contents
+---------------
+
+.. py:function:: default_collate(batch)
+
+   Merge data with outer dimension batch size.
+
+
+.. py:class:: IterableFetcher(dataset, collate_fn, drop_last, distributed)
+
+   Iterate to get next batch-size samples as a batch.
+
+
+.. py:class:: IndexFetcher(dataset, collate_fn, drop_last, distributed)
+
+   Take single index or a batch of indices to fetch samples as a batch.
+
+
+.. py:class:: IterableSampler(dataset)
+
+   Internally samples elements.
+
+   Used for datasets retrieved element by iterator. Yield None to act as a placeholder for each iteration.
+
+
+.. py:class:: SequentialSampler(dataset, distributed)
+
+   Sequentially samples elements, used for datasets retrieved element by index.
+
+
+.. py:class:: BatchSampler(sampler, batch_size, drop_last=True)
+
+   Yield a batch of indices and number of batches.
 
 
 .. py:class:: BaseDataLoader(dataset, batch_size=1, last_batch='rollover', collate_fn=None, sampler=None, batch_sampler=None, num_workers=0, pin_memory=False, shuffle=False, distributed=False)
 
-
-   Base class for all DataLoaders.
+   Base class for TF DataLoaders.
 
    _generate_dataloader is needed to create a dataloader object
    from the general params like batch_size and sampler. The dynamic batching is just to
@@ -35,7 +77,6 @@ Classes
 
 
 .. py:class:: DummyDataset(shape, low=-128.0, high=127.0, dtype='float32', label=True, transform=None, filter=None)
-
 
    Dataset used for dummy data generation.
 
@@ -45,7 +86,6 @@ Classes
 
 
 .. py:class:: DummyDatasetV2(input_shape, label_shape=None, low=-128.0, high=127.0, dtype='float32', transform=None, filter=None)
-
 
    Dataset used for dummy_v2 data generation.
 

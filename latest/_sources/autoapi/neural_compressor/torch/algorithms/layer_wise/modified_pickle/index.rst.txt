@@ -1,5 +1,5 @@
-:py:mod:`neural_compressor.torch.algorithms.layer_wise.modified_pickle`
-=======================================================================
+neural_compressor.torch.algorithms.layer_wise.modified_pickle
+=============================================================
 
 .. py:module:: neural_compressor.torch.algorithms.layer_wise.modified_pickle
 
@@ -30,11 +30,20 @@
 
 
 
+Exceptions
+----------
+
+.. autoapisummary::
+
+   neural_compressor.torch.algorithms.layer_wise.modified_pickle.PickleError
+   neural_compressor.torch.algorithms.layer_wise.modified_pickle.PicklingError
+   neural_compressor.torch.algorithms.layer_wise.modified_pickle.UnpicklingError
+
+
 Module Contents
 ---------------
 
 .. py:exception:: PickleError
-
 
 
 
@@ -45,18 +54,14 @@ Module Contents
 
 
 
-
-   This exception is raised when an unpicklable object is passed to the
-   dump() method.
+   This exception is raised when an unpicklable object is passed to the dump() method.
 
 
 .. py:exception:: UnpicklingError
 
 
 
-
-   This exception is raised when there is a problem unpickling an object,
-   such as a security violation.
+   This exception is raised when there is a problem unpickling an object, such as a security violation.
 
    Note that other exceptions may also be raised during unpickling, including
    (but not necessarily limited to) AttributeError, EOFError, ImportError,

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>INC Coding Conventions &mdash; Intel® Neural Compressor 2.5 documentation</title>
+  <title>INC Coding Conventions &mdash; Intel® Neural Compressor 3.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -55,7 +55,6 @@
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="get_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation_guide.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples_readme.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api-doc/apis.html">APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="releases_info.html">Release</a></li>
@@ -117,8 +116,6 @@
 
 <span class="kn">from</span> <span class="nn">x</span> <span class="kn">import</span> <span class="n">py</span>
 <span class="kn">from</span> <span class="nn">x</span> <span class="kn">import</span> <span class="n">y</span> <span class="k">as</span> <span class="n">z</span>
-<span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
-<span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">Popen</span><span class="p">,</span> <span class="n">PIPE</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -126,7 +123,8 @@
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sub_module</span> <span class="kn">import</span> <span class="o">*</span>  <span class="c1"># May lead to namespace pollution</span>
 <span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>  <span class="c1"># Import on separate lines</span>
-<span class="kn">import</span> <span class="nn">copy</span>  <span class="c1"># May import local copy.py</span>
+<span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">Popen</span>  <span class="c1"># Use import statements for packages and modules only, `Popen` is a class</span>
+<span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">PIPE</span>  <span class="c1"># Use import statements for packages and modules only, `Popen` is a constant</span>
 </pre></div>
 </div>
 </section>
@@ -207,7 +205,7 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Plugs:</p>
+<li><p>VS Code Extensions:</p>
 <ul>
 <li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">python</a></p></li>
 <li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance">pylance</a></p></li>
@@ -262,7 +260,7 @@
 <div><p>A <code class="docutils literal notranslate"><span class="pre">TODO</span></code> comment begins with the word <code class="docutils literal notranslate"><span class="pre">TODO:</span></code> for facilitate searching.</p>
 </div></blockquote>
 <ul class="simple">
-<li><p>Plug:
+<li><p>VS Code Extension:
 <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments">Better Comments</a></p></li>
 </ul>
 </section>
@@ -353,7 +351,7 @@
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   <jinja2.runtime.BlockReference object at 0x7f0b35abf970> 
+   <jinja2.runtime.BlockReference object at 0x7f415e353b20> 
   <p></p><div><a href='https://www.intel.com/content/www/us/en/privacy/intel-cookie-notice.html' data-cookie-notice='true'>Cookies</a> <a href='https://www.intel.com/content/www/us/en/privacy/intel-privacy-notice.html'>| Privacy</a></div>
 
 

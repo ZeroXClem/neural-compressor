@@ -1,5 +1,5 @@
-:py:mod:`neural_compressor.experimental.data.dataloaders.tensorflow_dataloader`
-===============================================================================
+neural_compressor.experimental.data.dataloaders.tensorflow_dataloader
+=====================================================================
 
 .. py:module:: neural_compressor.experimental.data.dataloaders.tensorflow_dataloader
 
@@ -9,11 +9,8 @@
 
 
 
-Module Contents
----------------
-
 Classes
-~~~~~~~
+-------
 
 .. autoapisummary::
 
@@ -23,10 +20,10 @@ Classes
    neural_compressor.experimental.data.dataloaders.tensorflow_dataloader.TensorflowDataLoader
 
 
-
+Module Contents
+---------------
 
 .. py:class:: TFDataDataLoader(dataset, batch_size=1, last_batch='rollover')
-
 
 
 
@@ -40,8 +37,7 @@ Classes
    :param batch_size: int. batch size
 
 
-.. py:class:: TensorflowBertDataLoader(dataset, batch_size=1, last_batch='rollover', collate_fn=None, sampler=None, batch_sampler=None, num_workers=0, pin_memory=False, shuffle=False, distributed=False)
-
+.. py:class:: TensorflowBertDataLoader
 
 
 
@@ -50,8 +46,7 @@ Classes
    this dataloader is designed to satisfy the usage of Bert models.
 
 
-.. py:class:: TensorflowModelZooBertDataLoader(dataset, batch_size=1, last_batch='rollover', collate_fn=None, sampler=None, batch_sampler=None, num_workers=0, pin_memory=False, shuffle=False, distributed=False)
-
+.. py:class:: TensorflowModelZooBertDataLoader
 
 
 
@@ -60,8 +55,7 @@ Classes
    this dataloader is designed to satisfy the usage of Model Zoo Bert models.
 
 
-.. py:class:: TensorflowDataLoader(dataset, batch_size=1, last_batch='rollover', collate_fn=None, sampler=None, batch_sampler=None, num_workers=0, pin_memory=False, shuffle=False, distributed=False)
-
+.. py:class:: TensorflowDataLoader
 
 
 

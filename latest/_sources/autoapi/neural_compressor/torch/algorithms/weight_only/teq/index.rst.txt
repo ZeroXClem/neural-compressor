@@ -1,40 +1,35 @@
-:orphan:
-
-:py:mod:`neural_compressor.torch.algorithms.weight_only.teq`
-============================================================
+neural_compressor.torch.algorithms.weight_only.teq
+==================================================
 
 .. py:module:: neural_compressor.torch.algorithms.weight_only.teq
+
+.. autoapi-nested-parse::
+
+   TEQ quantization.
+
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   neural_compressor.torch.algorithms.weight_only.teq.TrainableEquivalentTransformation
+   neural_compressor.torch.algorithms.weight_only.teq.TEQuantizer
 
 
 Module Contents
 ---------------
 
-Classes
-~~~~~~~
+.. py:class:: TrainableEquivalentTransformation(model, weight_config={}, absorb_to_layer=None, folding=True, example_inputs=None)
 
-.. autoapisummary::
-
-   neural_compressor.torch.algorithms.weight_only.teq.TEQuantizer
+   Weight-only quantization, Trainable Equivalent Transformation (TEQ).
 
 
-
-Functions
-~~~~~~~~~
-
-.. autoapisummary::
-
-   neural_compressor.torch.algorithms.weight_only.teq.teq_quantize
+.. py:class:: TEQuantizer(quant_config, folding, example_inputs, absorb_to_layer=None)
 
 
 
-.. py:class:: TEQuantizer(model, weight_config={}, absorb_to_layer={}, folding=True, example_inputs=None)
-
-
-   Weight-only quantization, Trainable Equivalent Transformation (TEQ): linear wrapper to apply scale to input.
-
-
-.. py:function:: teq_quantize(model, weight_config={}, absorb_to_layer={}, folding=True, dataloader=None, calib_func=None, example_inputs=None)
-
-   Run TEQ weight-only quantization.
+   TEQ Quantizer.
 
 
