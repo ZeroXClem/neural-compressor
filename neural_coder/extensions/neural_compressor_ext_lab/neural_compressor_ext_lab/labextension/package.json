@@ -93,7 +93,7 @@
     "react-sanitized-html": "^2.0.0",
     "sanitize-html": "^2.7.2",
     "shelljs": "^0.8.5",
-    "stream": "^0.0.2",
+    "stream": "^0.0.3",
     "util": "^0.12.4"
   },
   "devDependencies": {
