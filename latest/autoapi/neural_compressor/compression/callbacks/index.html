@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>neural_compressor.compression.callbacks &mdash; Intel® Neural Compressor 2.6 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css" />
+  <title>neural_compressor.compression.callbacks &mdash; Intel® Neural Compressor 3.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=fd3f3429" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=68dfede1" />
 
   
 <script type="text/javascript">
@@ -55,7 +55,6 @@
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../docs/source/get_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../docs/source/installation_guide.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../docs/source/user_guide.html">User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../docs/source/examples_readme.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../docs/source/api-doc/apis.html">APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../docs/source/releases_info.html">Release</a></li>
@@ -89,12 +88,12 @@
            <div itemprop="articleBody">
              
   <section id="module-neural_compressor.compression.callbacks">
-<span id="neural-compressor-compression-callbacks"></span><h1>neural_compressor.compression.callbacks<a class="headerlink" href="#module-neural_compressor.compression.callbacks" title="Permalink to this heading"></a></h1>
+<span id="neural-compressor-compression-callbacks"></span><h1>neural_compressor.compression.callbacks<a class="headerlink" href="#module-neural_compressor.compression.callbacks" title="Link to this heading"></a></h1>
 <p>This is a module for Component class.</p>
 <p>The Component class will be inherited by the class ‘QuantizationAwareTrainingCallbacks’,
 ‘PruningCallbacks’ and ‘DistillationCallbacks’.</p>
 <section id="classes">
-<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h2>
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#neural_compressor.compression.callbacks.BaseCallbacks" title="neural_compressor.compression.callbacks.BaseCallbacks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseCallbacks</span></code></a></p></td>
@@ -113,10 +112,10 @@
 </table>
 </section>
 <section id="module-contents">
-<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="neural_compressor.compression.callbacks.BaseCallbacks">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.callbacks.</span></span><span class="sig-name descname"><span class="pre">BaseCallbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/callbacks.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.callbacks.BaseCallbacks" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.callbacks.</span></span><span class="sig-name descname"><span class="pre">BaseCallbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/callbacks.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.callbacks.BaseCallbacks" title="Link to this definition"></a></dt>
 <dd><p>This is base class of Neural Compressor Callbacks.</p>
 <p>This class will be inherited by the class ‘QuantizationAwareTrainingCallbacks’,
 ‘PruningCallbacks’ and ‘DistillationCallbacks’.
@@ -126,7 +125,7 @@ In this class will apply all hooks for ‘Quantization’, ‘Pruning’ and ‘
 
 <dl class="py class">
 <dt class="sig sig-object py" id="neural_compressor.compression.callbacks.QuantizationAwareTrainingCallbacks">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.callbacks.</span></span><span class="sig-name descname"><span class="pre">QuantizationAwareTrainingCallbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adaptor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/callbacks.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.callbacks.QuantizationAwareTrainingCallbacks" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.callbacks.</span></span><span class="sig-name descname"><span class="pre">QuantizationAwareTrainingCallbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adaptor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/callbacks.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.callbacks.QuantizationAwareTrainingCallbacks" title="Link to this definition"></a></dt>
 <dd><p>This is the class for callbacks of quantization aware training.</p>
 <p>This design is mainly for Quantization-Aware Training.
 In this class will apply all hooks for Quantization-Aware Training.</p>
@@ -134,14 +133,14 @@ In this class will apply all hooks for Quantization-Aware Training.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="neural_compressor.compression.callbacks.PruningCallbacks">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.callbacks.</span></span><span class="sig-name descname"><span class="pre">PruningCallbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/callbacks.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.callbacks.PruningCallbacks" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.callbacks.</span></span><span class="sig-name descname"><span class="pre">PruningCallbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/callbacks.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.callbacks.PruningCallbacks" title="Link to this definition"></a></dt>
 <dd><p>This is the class for callbacks of pruning object.</p>
 <p>In this class will apply all hooks for Pruning.</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="neural_compressor.compression.callbacks.DistillationCallbacks">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.callbacks.</span></span><span class="sig-name descname"><span class="pre">DistillationCallbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/callbacks.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.callbacks.DistillationCallbacks" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.callbacks.</span></span><span class="sig-name descname"><span class="pre">DistillationCallbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/callbacks.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.callbacks.DistillationCallbacks" title="Link to this definition"></a></dt>
 <dd><p>Distillation class derived from Component class.</p>
 <p>Distillation class abstracted the pipeline of knowledge distillation,
 transfer the knowledge of the teacher model to the student model.</p>
@@ -155,26 +154,26 @@ transfer the knowledge of the teacher model to the student model.</p>
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="neural_compressor.compression.callbacks.DistillationCallbacks._epoch_ran">
-<span class="sig-name descname"><span class="pre">_epoch_ran</span></span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/callbacks.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.callbacks.DistillationCallbacks._epoch_ran" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">_epoch_ran</span></span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/callbacks.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.callbacks.DistillationCallbacks._epoch_ran" title="Link to this definition"></a></dt>
 <dd><p>A integer indicating how much epochs ran.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="neural_compressor.compression.callbacks.DistillationCallbacks.eval_frequency">
-<span class="sig-name descname"><span class="pre">eval_frequency</span></span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/callbacks.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.callbacks.DistillationCallbacks.eval_frequency" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">eval_frequency</span></span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/callbacks.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.callbacks.DistillationCallbacks.eval_frequency" title="Link to this definition"></a></dt>
 <dd><p>The frequency for doing evaluation of the student model
 in terms of epoch.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="neural_compressor.compression.callbacks.DistillationCallbacks.best_score">
-<span class="sig-name descname"><span class="pre">best_score</span></span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/callbacks.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.callbacks.DistillationCallbacks.best_score" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">best_score</span></span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/callbacks.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.callbacks.DistillationCallbacks.best_score" title="Link to this definition"></a></dt>
 <dd><p>The best metric of the student model in the training.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="neural_compressor.compression.callbacks.DistillationCallbacks.best_model">
-<span class="sig-name descname"><span class="pre">best_model</span></span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/callbacks.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.callbacks.DistillationCallbacks.best_model" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">best_model</span></span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/callbacks.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.callbacks.DistillationCallbacks.best_model" title="Link to this definition"></a></dt>
 <dd><p>The best student model found in the training.</p>
 </dd></dl>
 
@@ -197,7 +196,7 @@ in terms of epoch.</p>
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   <jinja2.runtime.BlockReference object at 0x7ff51f7c1d80> 
+   <jinja2.runtime.BlockReference object at 0x7f6328171de0> 
   <p></p><div><a href='https://www.intel.com/content/www/us/en/privacy/intel-cookie-notice.html' data-cookie-notice='true'>Cookies</a> <a href='https://www.intel.com/content/www/us/en/privacy/intel-privacy-notice.html'>| Privacy</a></div>
 
 

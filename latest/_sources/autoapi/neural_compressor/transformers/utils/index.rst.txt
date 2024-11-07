@@ -1,0 +1,20 @@
+neural_compressor.transformers.utils
+====================================
+
+.. py:module:: neural_compressor.transformers.utils
+
+.. autoapi-nested-parse::
+
+   Utils for optimization.
+
+
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/neural_compressor/transformers/utils/quantization_config/index
+
+

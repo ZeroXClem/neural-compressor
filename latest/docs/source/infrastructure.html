@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Infrastructure of Intel® Neural Compressor &mdash; Intel® Neural Compressor 3.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+  <title>Infrastructure of Intel® Neural Compressor &mdash; Intel® Neural Compressor 3.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=68dfede1" />
 
   
 <script type="text/javascript">
@@ -88,25 +88,25 @@
            <div itemprop="articleBody">
              
   <section id="infrastructure-of-intel-neural-compressor">
-<h1>Infrastructure of Intel® Neural Compressor<a class="headerlink" href="#infrastructure-of-intel-neural-compressor" title="Permalink to this heading"></a></h1>
+<h1>Infrastructure of Intel® Neural Compressor<a class="headerlink" href="#infrastructure-of-intel-neural-compressor" title="Link to this heading"></a></h1>
 <ol class="simple">
 <li><p><a class="reference external" href="#introduction">Introduction</a></p></li>
 <li><p><a class="reference external" href="#architecture">Architecture</a></p></li>
 <li><p><a class="reference external" href="#supported-feature-matrix">Supported Feature Matrix</a></p></li>
 </ol>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
 <p>Intel® Neural Compressor provides deep-learning model compression techniques like quantization, knowledge distillation, pruning/sparsity and neural architecture search (NAS). These features are already validated on intel cpu/gpu. Quantized models by Intel® Neural Compressor are validated on broad hardware platforms: .html cpu/arm cpu/nvidia gpu through OnnxRuntime extension provider. Intel® Neural Compressor supports different deep-learning frameworks via unified interfaces, so users can define their own evaluation function to support various models. For quantization, 420+ examples are validated with a performance speedup geomean of 2.2x and up to 4.2x on Intel VNNI. Over 30 pruning and knowledge distillation samples are also available.</p>
 <p>Neural Coder automatically inserts quantization code snippets on a PyTorch model script with one-line API, so this feature can increase the productivity. Intel® Neural Compressor provides other no-code features like GUI etc., so users can do basic optimization by uploading the models and clicking the button. After the optimization, the users will get optimized models and performance results.</p>
 </section>
 <section id="architecture">
-<h2>Architecture<a class="headerlink" href="#architecture" title="Permalink to this heading"></a></h2>
+<h2>Architecture<a class="headerlink" href="#architecture" title="Link to this heading"></a></h2>
 <a target="_blank" href="./imgs/architecture.png">
   <img src="./imgs/architecture.png" alt="Architecture" width=914 height=420>
 </a><p>Intel® Neural Compressor has unified interfaces which dispatch tasks to different frameworks via adaptor layer. The adaptor layer is the bridge between the tuning strategy and vanilla framework quantization APIs. Users can select tuning strategies and the strategy module contains model configs and tuning configs. Model configs define the quantization approach, if it’s post-training static quantization, users need to set more parameters like calibration and so on. There are several tuning strategies for users to choose from while the basic strategy is set as default.</p>
 </section>
 <section id="supported-feature-matrix">
-<h2>Supported Feature Matrix<a class="headerlink" href="#supported-feature-matrix" title="Permalink to this heading"></a></h2>
+<h2>Supported Feature Matrix<a class="headerlink" href="#supported-feature-matrix" title="Link to this heading"></a></h2>
 <p><a class="reference external" href="quantization.html">Quantization</a>:</p>
 <table class="center">
     <thead>
@@ -283,7 +283,7 @@
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   <jinja2.runtime.BlockReference object at 0x7f415c6a84c0> 
+   <jinja2.runtime.BlockReference object at 0x7f63288a4df0> 
   <p></p><div><a href='https://www.intel.com/content/www/us/en/privacy/intel-cookie-notice.html' data-cookie-notice='true'>Cookies</a> <a href='https://www.intel.com/content/www/us/en/privacy/intel-privacy-notice.html'>| Privacy</a></div>
 
 

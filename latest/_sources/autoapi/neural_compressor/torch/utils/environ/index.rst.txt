@@ -18,6 +18,8 @@ Functions
    neural_compressor.torch.utils.environ.is_transformers_imported
    neural_compressor.torch.utils.environ.is_package_available
    neural_compressor.torch.utils.environ.is_hpex_available
+   neural_compressor.torch.utils.environ.is_optimum_available
+   neural_compressor.torch.utils.environ.is_optimum_habana_available
    neural_compressor.torch.utils.environ.is_ipex_available
    neural_compressor.torch.utils.environ.get_ipex_version
    neural_compressor.torch.utils.environ.get_torch_version
@@ -49,6 +51,16 @@ Module Contents
 .. py:function:: is_hpex_available()
 
    Returns whether hpex is available.
+
+
+.. py:function:: is_optimum_available()
+
+   Return whether optimum-habana is available.
+
+
+.. py:function:: is_optimum_habana_available()
+
+   Return whether optimum-habana is available.
 
 
 .. py:function:: is_ipex_available()

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Metrics &mdash; Intel® Neural Compressor 3.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+  <title>Metrics &mdash; Intel® Neural Compressor 3.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=68dfede1" />
 
   
 <script type="text/javascript">
@@ -88,7 +88,7 @@
            <div itemprop="articleBody">
              
   <section id="metrics">
-<h1>Metrics<a class="headerlink" href="#metrics" title="Permalink to this heading"></a></h1>
+<h1>Metrics<a class="headerlink" href="#metrics" title="Link to this heading"></a></h1>
 <ol>
 <li><p><a class="reference external" href="#introduction">Introduction</a></p></li>
 <li><p><a class="reference external" href="#supported-built-in-metric-matrix">Supported Built-in Metric Matrix</a></p>
@@ -103,14 +103,14 @@
 </li>
 </ol>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
 <p>In terms of evaluating the performance of a specific model, we should have general metrics to measure the performance of different models. Different frameworks always have their own Metric module but with different APIs and parameters. As for Intel® Neural Compressor, it implements an internal metric and provides a unified <code class="docutils literal notranslate"><span class="pre">Metric</span></code> API. In special cases, users can also register their own metric classes through <a class="reference external" href="#build-custom-metric-with-python-api">Build Custom Metric with Python API</a>.</p>
 </section>
 <section id="supported-built-in-metric-matrix">
-<h2>Supported Built-in Metric Matrix<a class="headerlink" href="#supported-built-in-metric-matrix" title="Permalink to this heading"></a></h2>
+<h2>Supported Built-in Metric Matrix<a class="headerlink" href="#supported-built-in-metric-matrix" title="Link to this heading"></a></h2>
 <p>Neural Compressor supports some built-in metrics that are popularly used in industry.</p>
 <section id="tensorflow">
-<h3>TensorFlow<a class="headerlink" href="#tensorflow" title="Permalink to this heading"></a></h3>
+<h3>TensorFlow<a class="headerlink" href="#tensorflow" title="Link to this heading"></a></h3>
 <table border="1" class="docutils">
 <thead>
 <tr>
@@ -202,7 +202,7 @@
 </tbody>
 </table></section>
 <section id="pytorch">
-<h3>PyTorch<a class="headerlink" href="#pytorch" title="Permalink to this heading"></a></h3>
+<h3>PyTorch<a class="headerlink" href="#pytorch" title="Link to this heading"></a></h3>
 <table border="1" class="docutils">
 <thead>
 <tr>
@@ -258,7 +258,7 @@
 </tbody>
 </table></section>
 <section id="mxnet">
-<h3>MXNet<a class="headerlink" href="#mxnet" title="Permalink to this heading"></a></h3>
+<h3>MXNet<a class="headerlink" href="#mxnet" title="Link to this heading"></a></h3>
 <table border="1" class="docutils">
 <thead>
 <tr>
@@ -314,7 +314,7 @@
 </tbody>
 </table></section>
 <section id="onnxrt">
-<h3>ONNXRT<a class="headerlink" href="#onnxrt" title="Permalink to this heading"></a></h3>
+<h3>ONNXRT<a class="headerlink" href="#onnxrt" title="Link to this heading"></a></h3>
 <table border="1" class="docutils">
 <thead>
 <tr>
@@ -401,9 +401,9 @@
 </table></section>
 </section>
 <section id="get-started-with-metric">
-<h2>Get Started with Metric<a class="headerlink" href="#get-started-with-metric" title="Permalink to this heading"></a></h2>
+<h2>Get Started with Metric<a class="headerlink" href="#get-started-with-metric" title="Link to this heading"></a></h2>
 <section id="use-intel-neural-compressor-metric-api">
-<h3>Use Intel® Neural Compressor Metric API<a class="headerlink" href="#use-intel-neural-compressor-metric-api" title="Permalink to this heading"></a></h3>
+<h3>Use Intel® Neural Compressor Metric API<a class="headerlink" href="#use-intel-neural-compressor-metric-api" title="Link to this heading"></a></h3>
 <p>Users can specify a Neural Compressor built-in metric such as shown below:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">neural_compressor</span> <span class="kn">import</span> <span class="n">Metric</span>
 <span class="kn">from</span> <span class="nn">neural_compressor</span> <span class="kn">import</span> <span class="n">quantization</span><span class="p">,</span> <span class="n">PostTrainingQuantConfig</span>
@@ -415,7 +415,7 @@
 </div>
 </section>
 <section id="build-custom-metric-with-python-api">
-<h3>Build Custom Metric with Python API<a class="headerlink" href="#build-custom-metric-with-python-api" title="Permalink to this heading"></a></h3>
+<h3>Build Custom Metric with Python API<a class="headerlink" href="#build-custom-metric-with-python-api" title="Link to this heading"></a></h3>
 <p>Please refer to <a class="reference external" href="../../neural_compressor/metric">Metrics code</a>, users can also register their own metric as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NewMetric</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -444,7 +444,7 @@
 </section>
 </section>
 <section id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Refer to this <a class="reference external" href="https://github.com/intel/neural-compressor/tree/master/examples/onnxrt/body_analysis/onnx_model_zoo/arcface/quantization/ptq_static">example</a> for how to define a customised metric.</p></li>
 <li><p>Refer to this <a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/examples/tensorflow/image_recognition/tensorflow_models/efficientnet-b0/quantization/ptq">example</a> for how to use internal metric.</p></li>
@@ -466,7 +466,7 @@
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   <jinja2.runtime.BlockReference object at 0x7f415c6a8cd0> 
+   <jinja2.runtime.BlockReference object at 0x7f63286b45b0> 
   <p></p><div><a href='https://www.intel.com/content/www/us/en/privacy/intel-cookie-notice.html' data-cookie-notice='true'>Cookies</a> <a href='https://www.intel.com/content/www/us/en/privacy/intel-privacy-notice.html'>| Privacy</a></div>
 
 

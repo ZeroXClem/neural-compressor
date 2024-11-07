@@ -71,7 +71,7 @@ Module Contents
    Base config class for torch backend.
 
 
-.. py:class:: RTNConfig(dtype: str = 'int', bits: int = 4, use_sym: bool = True, group_size: int = 32, group_dim: int = 1, use_full_range: bool = False, use_mse_search: bool = False, use_layer_wise: bool = False, model_path: str = '', use_double_quant: bool = False, double_quant_dtype: str = 'int', double_quant_bits: int = 8, double_quant_use_sym: bool = False, double_quant_group_size: int = 256, quant_lm_head: bool = False, white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST)
+.. py:class:: RTNConfig(dtype: str = 'int', bits: int = 4, use_sym: bool = True, group_size: int = 32, group_dim: int = 1, use_full_range: bool = False, use_mse_search: bool = False, use_layer_wise: bool = False, model_path: str = '', use_double_quant: bool = False, double_quant_dtype: str = 'int', double_quant_bits: int = 8, double_quant_use_sym: bool = False, double_quant_group_size: int = 256, quant_lm_head: bool = False, white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST, **kwargs)
 
 
 
@@ -101,7 +101,7 @@ Module Contents
    :rtype: dict
 
 
-.. py:class:: GPTQConfig(dtype: str = 'int', bits: int = 4, use_sym: bool = True, group_size: int = 32, use_mse_search: bool = False, use_layer_wise: bool = False, model_path: str = '', use_double_quant: bool = False, double_quant_dtype: str = 'int', double_quant_bits: int = 8, double_quant_use_sym: bool = False, double_quant_group_size: int = 256, quant_lm_head: bool = False, act_order: bool = False, percdamp: float = 0.01, block_size: int = 2048, static_groups: bool = False, white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST)
+.. py:class:: GPTQConfig(dtype: str = 'int', bits: int = 4, use_sym: bool = True, group_size: int = 32, use_mse_search: bool = False, use_layer_wise: bool = False, model_path: str = '', use_double_quant: bool = False, double_quant_dtype: str = 'int', double_quant_bits: int = 8, double_quant_use_sym: bool = False, double_quant_group_size: int = 256, quant_lm_head: bool = False, act_order: bool = False, percdamp: float = 0.01, block_size: int = 2048, static_groups: bool = False, true_sequential: bool = False, white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST, **kwargs)
 
 
 
@@ -123,7 +123,7 @@ Module Contents
    :rtype: GPTQConfig
 
 
-.. py:class:: AWQConfig(dtype: str = 'int', bits: int = 4, use_sym: bool = True, group_size: int = 32, group_dim: int = 1, use_full_range: bool = False, use_mse_search: bool = False, use_layer_wise: bool = False, model_path: str = '', use_double_quant: bool = False, double_quant_dtype: str = 'int', double_quant_bits: int = 8, double_quant_use_sym: bool = True, double_quant_group_size: int = 256, quant_lm_head: bool = False, use_auto_scale: bool = True, use_auto_clip: bool = True, folding: bool = False, white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST, absorb_layer_dict: dict = {})
+.. py:class:: AWQConfig(dtype: str = 'int', bits: int = 4, use_sym: bool = True, group_size: int = 32, group_dim: int = 1, use_full_range: bool = False, use_mse_search: bool = False, use_layer_wise: bool = False, model_path: str = '', use_double_quant: bool = False, double_quant_dtype: str = 'int', double_quant_bits: int = 8, double_quant_use_sym: bool = True, double_quant_group_size: int = 256, quant_lm_head: bool = False, use_auto_scale: bool = True, use_auto_clip: bool = True, folding: bool = False, white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST, absorb_layer_dict: dict = {}, **kwargs)
 
 
 
@@ -140,7 +140,7 @@ Module Contents
    :returns: the default awq config.
 
 
-.. py:class:: TEQConfig(dtype: str = 'int', bits: int = 4, use_sym: bool = True, group_size: int = 32, group_dim: int = 1, use_full_range: bool = False, use_mse_search: bool = False, use_layer_wise: bool = False, use_double_quant: bool = False, double_quant_dtype: str = 'int', double_quant_bits: int = 8, double_quant_use_sym: bool = True, double_quant_group_size: int = 256, quant_lm_head: bool = False, absorb_to_layer: dict = {}, folding: bool = True, white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST)
+.. py:class:: TEQConfig(dtype: str = 'int', bits: int = 4, use_sym: bool = True, group_size: int = 32, group_dim: int = 1, use_full_range: bool = False, use_mse_search: bool = False, use_layer_wise: bool = False, use_double_quant: bool = False, double_quant_dtype: str = 'int', double_quant_bits: int = 8, double_quant_use_sym: bool = True, double_quant_group_size: int = 256, quant_lm_head: bool = False, absorb_to_layer: dict = {}, folding: bool = True, white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST, **kwargs)
 
 
 
@@ -157,7 +157,7 @@ Module Contents
    :returns: the default teq config.
 
 
-.. py:class:: AutoRoundConfig(dtype: str = 'int', bits: int = 4, use_sym: bool = False, group_size: int = 128, act_bits: int = 32, act_group_size: int = None, act_sym: bool = None, act_dynamic: bool = True, enable_full_range: bool = False, batch_size: int = 8, lr_scheduler=None, enable_quanted_input: bool = True, enable_minmax_tuning: bool = True, lr: float = None, minmax_lr: float = None, low_gpu_mem_usage: bool = False, iters: int = 200, seqlen: int = 2048, nsamples: int = 128, sampler: str = 'rand', seed: int = 42, nblocks: int = 1, gradient_accumulate_steps: int = 1, not_use_best_mse: bool = False, dynamic_max_gap: int = -1, scale_dtype: str = 'fp16', use_layer_wise: bool = False, quant_block_list: list = None, white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST)
+.. py:class:: AutoRoundConfig(dtype: str = 'int', bits: int = 4, use_sym: bool = False, group_size: int = 128, act_bits: int = 32, act_group_size: int = None, act_sym: bool = None, act_dynamic: bool = True, enable_full_range: bool = False, batch_size: int = 8, lr_scheduler=None, enable_quanted_input: bool = True, enable_minmax_tuning: bool = True, lr: float = None, minmax_lr: float = None, low_gpu_mem_usage: bool = False, iters: int = 200, seqlen: int = 2048, nsamples: int = 128, sampler: str = 'rand', seed: int = 42, nblocks: int = 1, gradient_accumulate_steps: int = 1, not_use_best_mse: bool = False, dynamic_max_gap: int = -1, scale_dtype: str = 'fp16', use_layer_wise: bool = False, quant_block_list: list = None, export_format: str = 'itrex', white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST, **kwargs)
 
 
 
@@ -180,7 +180,7 @@ Module Contents
    :rtype: AutoRoundConfig
 
 
-.. py:class:: MXQuantConfig(w_dtype: str = 'int8', act_dtype: str = 'int8', out_dtype: str = 'bfloat16', blocksize: int = 32, round_method: str = 'nearest', weight_only: bool = False, white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST)
+.. py:class:: MXQuantConfig(w_dtype: str = 'int8', act_dtype: str = 'int8', out_dtype: str = 'bfloat16', blocksize: int = 32, round_method: str = 'nearest', weight_only: bool = False, white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST, **kwargs)
 
 
 
@@ -194,7 +194,7 @@ Module Contents
    :returns: the default rtn config.
 
 
-.. py:class:: DynamicQuantConfig(w_dtype: str = 'int8', w_sym: bool = True, w_granularity: str = 'per_tensor', w_algo: str = 'minmax', act_dtype: str = 'uint8', act_sym: bool = False, act_granularity: str = 'per_tensor', act_algo: str = 'kl', white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST)
+.. py:class:: DynamicQuantConfig(w_dtype: str = 'int8', w_sym: bool = True, w_granularity: str = 'per_tensor', w_algo: str = 'minmax', act_dtype: str = 'uint8', act_sym: bool = False, act_granularity: str = 'per_tensor', act_algo: str = 'kl', white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST, **kwargs)
 
 
 
@@ -208,7 +208,7 @@ Module Contents
    :returns: the default dynamic quant config.
 
 
-.. py:class:: StaticQuantConfig(w_dtype: str = 'int8', w_sym: bool = True, w_granularity: str = 'per_channel', w_algo: str = 'minmax', act_dtype: str = 'uint8', act_sym: bool = False, act_granularity: str = 'per_tensor', act_algo: str = 'minmax', excluded_precisions: list = [], white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST, model_info: Optional[List[Tuple[str, Callable]]] = None)
+.. py:class:: StaticQuantConfig(w_dtype: str = 'int8', w_sym: bool = True, w_granularity: str = 'per_channel', w_algo: str = 'minmax', act_dtype: str = 'uint8', act_sym: bool = False, act_granularity: str = 'per_tensor', act_algo: str = 'minmax', excluded_precisions: list = [], white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST, model_info: Optional[List[Tuple[str, Callable]]] = None, **kwargs)
 
 
 
@@ -222,7 +222,7 @@ Module Contents
    :returns: the default static quant config.
 
 
-.. py:class:: SmoothQuantConfig(w_dtype: str = 'int8', w_sym: bool = True, w_granularity: str = 'per_channel', w_algo: str = 'minmax', act_dtype: str = 'uint8', act_sym: bool = False, act_granularity: str = 'per_tensor', act_algo: str = 'minmax', excluded_precisions: list = [], alpha: float = 0.5, folding: bool = False, scale_sharing: bool = False, init_alpha: float = 0.5, alpha_min: float = 0.0, alpha_max: float = 1.0, alpha_step: float = 0.1, shared_criterion: str = 'max', do_blockwise: bool = False, auto_alpha_args: dict = None, white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST)
+.. py:class:: SmoothQuantConfig(w_dtype: str = 'int8', w_sym: bool = True, w_granularity: str = 'per_channel', w_algo: str = 'minmax', act_dtype: str = 'uint8', act_sym: bool = False, act_granularity: str = 'per_tensor', act_algo: str = 'minmax', excluded_precisions: list = [], alpha: float = 0.5, folding: bool = False, scale_sharing: bool = False, init_alpha: float = 0.5, alpha_min: float = 0.0, alpha_max: float = 1.0, alpha_step: float = 0.1, shared_criterion: str = 'max', do_blockwise: bool = False, auto_alpha_args: dict = None, white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST, **kwargs)
 
 
 
@@ -236,7 +236,7 @@ Module Contents
    :returns: the default smoothquant config.
 
 
-.. py:class:: HQQConfig(dtype: str = 'int', bits: int = 4, group_size: int = 64, quant_zero: bool = True, quant_scale: bool = False, scale_quant_group_size: int = 128, quant_lm_head: bool = False, white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST)
+.. py:class:: HQQConfig(dtype: str = 'int', bits: int = 4, group_size: int = 64, quant_zero: bool = True, quant_scale: bool = False, scale_quant_group_size: int = 128, quant_lm_head: bool = False, white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST, **kwargs)
 
 
 
@@ -254,7 +254,7 @@ Module Contents
    :returns: the default HQQ config.
 
 
-.. py:class:: FP8Config(dump_stats_path: str = './hqt_output/measure', fp8_config: str = 'E4M3', hp_dtype: str = 'bf16', blocklist: dict = {'names': [], 'types': ()}, allowlist: dict = {'names': [], 'types': FP8_WHITE_LIST}, mode: str = 'AUTO', scale_method: str = 'maxabs_hw', scale_params: dict = {}, observer: str = 'maxabs', mod_dict: dict = {}, measure_exclude: str = 'OUTPUT', **kwargs)
+.. py:class:: FP8Config(dump_stats_path: str = './hqt_output/measure', fp8_config: str = 'E4M3', hp_dtype: str = 'bf16', blocklist: dict = {'names': [], 'types': ()}, allowlist: dict = {'names': [], 'types': FP8_WHITE_LIST}, mode: str = 'AUTO', scale_method: str = 'maxabs_hw', scale_params: dict = {}, observer: str = 'maxabs', mod_dict: dict = {}, measure_exclude: str = 'OUTPUT', fake_quant: bool = False, scale_format: str = 'const', **kwargs)
 
 
 
@@ -275,7 +275,7 @@ Module Contents
    :returns: the default fp8 config.
 
 
-.. py:class:: MixedPrecisionConfig(dtype: Union[str, List[str]] = 'fp16', white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST)
+.. py:class:: MixedPrecisionConfig(dtype: Union[str, List[str]] = 'fp16', white_list: Optional[List[neural_compressor.common.utils.OP_NAME_OR_MODULE_TYPE]] = DEFAULT_WHITE_LIST, **kwargs)
 
 
 

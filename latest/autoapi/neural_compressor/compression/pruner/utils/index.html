@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../../../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>neural_compressor.compression.pruner.utils &mdash; Intel® Neural Compressor 2.6 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css" />
+  <title>neural_compressor.compression.pruner.utils &mdash; Intel® Neural Compressor 3.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css?v=fd3f3429" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=68dfede1" />
 
   
 <script type="text/javascript">
@@ -55,7 +55,6 @@
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../docs/source/get_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../docs/source/installation_guide.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../../docs/source/user_guide.html">User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../docs/source/examples_readme.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../docs/source/api-doc/apis.html">APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../docs/source/releases_info.html">Release</a></li>
@@ -89,10 +88,10 @@
            <div itemprop="articleBody">
              
   <section id="module-neural_compressor.compression.pruner.utils">
-<span id="neural-compressor-compression-pruner-utils"></span><h1>neural_compressor.compression.pruner.utils<a class="headerlink" href="#module-neural_compressor.compression.pruner.utils" title="Permalink to this heading"></a></h1>
+<span id="neural-compressor-compression-pruner-utils"></span><h1>neural_compressor.compression.pruner.utils<a class="headerlink" href="#module-neural_compressor.compression.pruner.utils" title="Link to this heading"></a></h1>
 <p>Prune utils.</p>
 <section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h2>
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#neural_compressor.compression.pruner.utils.get_sparsity_ratio" title="neural_compressor.compression.pruner.utils.get_sparsity_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_sparsity_ratio</span></code></a>(pruners, model)</p></td>
@@ -137,23 +136,20 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#neural_compressor.compression.pruner.utils.parse_to_prune_tf" title="neural_compressor.compression.pruner.utils.parse_to_prune_tf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_to_prune_tf</span></code></a>(config, model)</p></td>
 <td><p>Keep target pruned layers.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#neural_compressor.compression.pruner.utils.generate_pruner_config" title="neural_compressor.compression.pruner.utils.generate_pruner_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_pruner_config</span></code></a>(info)</p></td>
-<td><p>Generate pruner config object from prune information.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#neural_compressor.compression.pruner.utils.get_layers" title="neural_compressor.compression.pruner.utils.get_layers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_layers</span></code></a>(model)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#neural_compressor.compression.pruner.utils.get_layers" title="neural_compressor.compression.pruner.utils.get_layers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_layers</span></code></a>(model)</p></td>
 <td><p>Get each layer's name and its module.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#neural_compressor.compression.pruner.utils.collect_layer_inputs" title="neural_compressor.compression.pruner.utils.collect_layer_inputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">collect_layer_inputs</span></code></a>(model, layers, layer_idx, ...[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#neural_compressor.compression.pruner.utils.collect_layer_inputs" title="neural_compressor.compression.pruner.utils.collect_layer_inputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">collect_layer_inputs</span></code></a>(model, layers, layer_idx, ...[, ...])</p></td>
 <td><p>Getting the forward input of a layer.</p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="module-contents">
-<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.utils.get_sparsity_ratio">
-<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">get_sparsity_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pruners</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.get_sparsity_ratio" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">get_sparsity_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pruners</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.get_sparsity_ratio" title="Link to this definition"></a></dt>
 <dd><p>Calculate sparsity ratio of a module/layer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -167,7 +163,7 @@ blockwise_over_matmul_gemm_conv refers to all-zero blocks’ ratio in pruning la
 
 <dl class="py function">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.utils.get_sparsity_ratio_tf">
-<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">get_sparsity_ratio_tf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pruners</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.get_sparsity_ratio_tf" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">get_sparsity_ratio_tf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pruners</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.get_sparsity_ratio_tf" title="Link to this definition"></a></dt>
 <dd><p>Calculate sparsity ratio of a module/layer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -181,7 +177,7 @@ blockwise_over_matmul_gemm_conv refers to all-zero blocks’ ratio in pruning la
 
 <dl class="py function">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.utils.check_config">
-<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">check_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prune_config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.check_config" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">check_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prune_config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.check_config" title="Link to this definition"></a></dt>
 <dd><p>Check if the configuration dict is valid for running Pruning object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -198,7 +194,7 @@ blockwise_over_matmul_gemm_conv refers to all-zero blocks’ ratio in pruning la
 
 <dl class="py function">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.utils.reset_none_to_default">
-<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">reset_none_to_default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.reset_none_to_default" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">reset_none_to_default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.reset_none_to_default" title="Link to this definition"></a></dt>
 <dd><p>Set undefined configurations to default values.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -213,13 +209,13 @@ blockwise_over_matmul_gemm_conv refers to all-zero blocks’ ratio in pruning la
 
 <dl class="py function">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.utils.update_params">
-<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">update_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">info</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.update_params" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">update_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">info</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.update_params" title="Link to this definition"></a></dt>
 <dd><p>Update parameters.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.utils.process_weight_config">
-<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">process_weight_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">global_config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_configs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.process_weight_config" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">process_weight_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">global_config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_configs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.process_weight_config" title="Link to this definition"></a></dt>
 <dd><p>Process pruning configurations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -240,7 +236,7 @@ blockwise_over_matmul_gemm_conv refers to all-zero blocks’ ratio in pruning la
 
 <dl class="py function">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.utils.process_yaml_config">
-<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">process_yaml_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">global_config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_configs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.process_yaml_config" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">process_yaml_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">global_config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_configs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.process_yaml_config" title="Link to this definition"></a></dt>
 <dd><p>Process the yaml configuration file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -261,7 +257,7 @@ blockwise_over_matmul_gemm_conv refers to all-zero blocks’ ratio in pruning la
 
 <dl class="py function">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.utils.check_key_validity">
-<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">check_key_validity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template_config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.check_key_validity" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">check_key_validity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template_config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.check_key_validity" title="Link to this definition"></a></dt>
 <dd><p>Check the validity of keys.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -275,7 +271,7 @@ blockwise_over_matmul_gemm_conv refers to all-zero blocks’ ratio in pruning la
 
 <dl class="py function">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.utils.process_and_check_config">
-<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">process_and_check_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.process_and_check_config" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">process_and_check_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.process_and_check_config" title="Link to this definition"></a></dt>
 <dd><p>Process and check configurations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -286,7 +282,7 @@ blockwise_over_matmul_gemm_conv refers to all-zero blocks’ ratio in pruning la
 
 <dl class="py function">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.utils.process_config">
-<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">process_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.process_config" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">process_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.process_config" title="Link to this definition"></a></dt>
 <dd><p>Obtain a config dict object from the config file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -300,7 +296,7 @@ blockwise_over_matmul_gemm_conv refers to all-zero blocks’ ratio in pruning la
 
 <dl class="py function">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.utils.parse_last_linear">
-<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">parse_last_linear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.parse_last_linear" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">parse_last_linear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.parse_last_linear" title="Link to this definition"></a></dt>
 <dd><p>Locate the last linear layers of the model.
 While pruning, the final linear often acts like classifier head, which might cause
 accuracy drop.</p>
@@ -313,7 +309,7 @@ accuracy drop.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.utils.parse_last_linear_tf">
-<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">parse_last_linear_tf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.parse_last_linear_tf" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">parse_last_linear_tf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.parse_last_linear_tf" title="Link to this definition"></a></dt>
 <dd><p>Locate the last linear layers of the model.
 While pruning, the final linear often acts like classifier head, which might cause
 accuracy drop.</p>
@@ -326,7 +322,7 @@ accuracy drop.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.utils.parse_to_prune">
-<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">parse_to_prune</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.parse_to_prune" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">parse_to_prune</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.parse_to_prune" title="Link to this definition"></a></dt>
 <dd><p>Keep target pruned layers.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -340,7 +336,7 @@ accuracy drop.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.utils.parse_to_prune_tf">
-<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">parse_to_prune_tf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.parse_to_prune_tf" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">parse_to_prune_tf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.parse_to_prune_tf" title="Link to this definition"></a></dt>
 <dd><p>Keep target pruned layers.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -353,25 +349,8 @@ accuracy drop.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="neural_compressor.compression.pruner.utils.generate_pruner_config">
-<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">generate_pruner_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">info</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.generate_pruner_config" title="Permalink to this definition"></a></dt>
-<dd><p>Generate pruner config object from prune information.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>info</strong> – A dotdict that saves prune information.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A pruner config object.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>pruner</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.utils.get_layers">
-<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">get_layers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.get_layers" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">get_layers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.get_layers" title="Link to this definition"></a></dt>
 <dd><p>Get each layer’s name and its module.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -383,7 +362,7 @@ accuracy drop.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.utils.collect_layer_inputs">
-<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">collect_layer_inputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cuda:0'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.collect_layer_inputs" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.utils.</span></span><span class="sig-name descname"><span class="pre">collect_layer_inputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cuda:0'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.utils.collect_layer_inputs" title="Link to this definition"></a></dt>
 <dd><p>Getting the forward input of a layer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -416,7 +395,7 @@ accuracy drop.</p>
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   <jinja2.runtime.BlockReference object at 0x7ff51f7a5c60> 
+   <jinja2.runtime.BlockReference object at 0x7f6321ff7970> 
   <p></p><div><a href='https://www.intel.com/content/www/us/en/privacy/intel-cookie-notice.html' data-cookie-notice='true'>Cookies</a> <a href='https://www.intel.com/content/www/us/en/privacy/intel-privacy-notice.html'>| Privacy</a></div>
 
 

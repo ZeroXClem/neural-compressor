@@ -25,13 +25,13 @@ Functions
    neural_compressor.torch.algorithms.layer_wise.utils.get_module
    neural_compressor.torch.algorithms.layer_wise.utils.get_children
    neural_compressor.torch.algorithms.layer_wise.utils.get_named_children
-   neural_compressor.torch.algorithms.layer_wise.utils.dowload_hf_model
-   neural_compressor.torch.algorithms.layer_wise.utils.load_empty_model
    neural_compressor.torch.algorithms.layer_wise.utils.get_super_module_by_name
    neural_compressor.torch.algorithms.layer_wise.utils.update_module
    neural_compressor.torch.algorithms.layer_wise.utils.load_layer_wise_quantized_model
    neural_compressor.torch.algorithms.layer_wise.utils.load_tensor_from_shard
    neural_compressor.torch.algorithms.layer_wise.utils.load_tensor
+   neural_compressor.torch.algorithms.layer_wise.utils.load_tensor_from_safetensors
+   neural_compressor.torch.algorithms.layer_wise.utils.load_tensor_from_safetensors_shard
    neural_compressor.torch.algorithms.layer_wise.utils.load_value
    neural_compressor.torch.algorithms.layer_wise.utils.load_module
    neural_compressor.torch.algorithms.layer_wise.utils.register_weight_hooks
@@ -68,16 +68,6 @@ Module Contents
    Get all the name and children of given model.
 
 
-.. py:function:: dowload_hf_model(repo_id, cache_dir=None, repo_type=None, revision=None)
-
-   Download hugging face model from hf hub.
-
-
-.. py:function:: load_empty_model(pretrained_model_name_or_path, cls=AutoModelForCausalLM, **kwargs)
-
-   Load a empty model.
-
-
 .. py:function:: get_super_module_by_name(model, module_name)
 
    Get the father module with given name of child module.
@@ -103,7 +93,17 @@ Module Contents
    Load a tensor from bin file with given tensor name.
 
 
-.. py:function:: load_value(model, param_name, path)
+.. py:function:: load_tensor_from_safetensors(path, tensor_name=None, device='cpu')
+
+   Load a tensor from safetensors file with given tensor name.
+
+
+.. py:function:: load_tensor_from_safetensors_shard(pretrained_model_name_or_path, tensor_name, prefix=None, device='cpu')
+
+   Load tensor from shard.
+
+
+.. py:function:: load_value(model, param_name, path, device='cpu')
 
    Load the module value.
 
@@ -113,6 +113,8 @@ Module Contents
    :type param_name: str
    :param path: path to load state_dict per layer.
    :type path: str
+   :param device: module device. Defaults to "cpu".
+   :type device: str, optional
 
    :returns: the module value.
    :rtype: tensor

@@ -26,6 +26,15 @@ Functions
    neural_compressor.torch.utils.utility.get_processor_type_from_user_config
    neural_compressor.torch.utils.utility.dowload_hf_model
    neural_compressor.torch.utils.utility.load_empty_model
+   neural_compressor.torch.utils.utility.get_module
+   neural_compressor.torch.utils.utility.get_layer_names_in_block
+   neural_compressor.torch.utils.utility.to_dtype
+   neural_compressor.torch.utils.utility.to_device
+   neural_compressor.torch.utils.utility.get_block_names
+   neural_compressor.torch.utils.utility.validate_modules
+   neural_compressor.torch.utils.utility.get_multimodal_block_names
+   neural_compressor.torch.utils.utility.detect_device
+   neural_compressor.torch.utils.utility.run_fn_for_vlm_autoround
 
 
 Module Contents
@@ -165,5 +174,112 @@ Module Contents
 .. py:function:: load_empty_model(pretrained_model_name_or_path, cls=None, **kwargs)
 
    Load a empty model.
+
+
+.. py:function:: get_module(module, key)
+
+   Get module from model by key name.
+
+   :param module: original model
+   :type module: torch.nn.Module
+   :param key: module name to be replaced
+   :type key: str
+
+
+.. py:function:: get_layer_names_in_block(model, supported_types=SUPPORTED_LAYERS, quant_block_list=None)
+
+   Retrieves the names of layers within each block of the model.
+
+   :returns:
+
+             A list of strings, where each string is the name of a layer
+                   within a block of the model.
+   :rtype: list
+
+
+.. py:function:: to_dtype(input, dtype=torch.float32)
+
+   Moves input data to the specified data type.
+
+   Args:
+   input: The input data to be moved.
+   dtype: The target data type.
+
+   Returns:
+   The input data on the specified data type.
+
+
+.. py:function:: to_device(input, device=torch.device('cpu'))
+
+   Moves input data to the specified device.
+
+   Args:
+   input: The input data to be moved.
+   device: The target device.
+
+   Returns:
+   The input data on the specified device.
+
+
+.. py:function:: get_block_names(model)
+
+   Get the block names for transformers-like networks.
+
+   Args:
+   model: The model.
+
+   Returns:
+   block_names: A list whose elements are list of block's layer names
+
+
+.. py:function:: validate_modules(module_names)
+
+   Test a list of modules' validity.
+
+   Args:
+   modules (list of str): List of strings to be validated.
+
+   Returns:
+   bool: True if all modules have equal length or not dependent, otherwise False.
+
+
+.. py:function:: get_multimodal_block_names(model, quant_vision=False)
+
+   Get the multimodal model block names for transformers-like networks.
+
+   Args:
+   model: The model.
+
+   Returns:
+   block_names: A list whose elements are list of block's layer names
+
+
+.. py:function:: detect_device(device=None)
+
+   Detects the device to use for model execution (GPU, HPU, or CPU).
+
+   :param device:
+                  - If a string ('cuda', 'cpu', or 'hpu') or torch.device is provided, that device is selected.
+                  - If an integer is provided, it treats it as a GPU device index.
+                  - If None or 'auto', it automatically selects 'cuda' if available, 'hpu' if Habana is available,
+                    or falls back to 'cpu'.
+   :type device: str, int, torch.device, optional
+
+   :returns: The selected device in string format ('cuda:X', 'hpu', or 'cpu').
+   :rtype: str
+
+
+.. py:function:: run_fn_for_vlm_autoround(model, dataloader, seqlen=512, nsamples=512)
+
+   Runs a model on a provided dataset with automatic device detection for vector-language models.
+
+   :param model: The model to run.
+   :param dataloader: A PyTorch dataloader providing the input data for the model.
+   :param seqlen: The minimum sequence length of input data to process. Defaults to 512.
+   :type seqlen: int, optional
+   :param nsamples: The number of samples to process before stopping. Defaults to 512.
+   :type nsamples: int, optional
+
+   :returns: None
 
 

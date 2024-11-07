@@ -1,0 +1,11 @@
+neural_compressor.transformers.quantization.utils
+=================================================
+
+.. py:module:: neural_compressor.transformers.quantization.utils
+
+.. autoapi-nested-parse::
+
+   Intel Neural Compressor model convert.
+
+
+

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../../../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>neural_compressor.compression.pruner.schedulers &mdash; Intel® Neural Compressor 2.6 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css" />
+  <title>neural_compressor.compression.pruner.schedulers &mdash; Intel® Neural Compressor 3.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css?v=fd3f3429" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=68dfede1" />
 
   
 <script type="text/javascript">
@@ -55,7 +55,6 @@
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../docs/source/get_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../docs/source/installation_guide.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../../docs/source/user_guide.html">User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../docs/source/examples_readme.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../docs/source/api-doc/apis.html">APIs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../docs/source/releases_info.html">Release</a></li>
@@ -89,10 +88,10 @@
            <div itemprop="articleBody">
              
   <section id="module-neural_compressor.compression.pruner.schedulers">
-<span id="neural-compressor-compression-pruner-schedulers"></span><h1>neural_compressor.compression.pruner.schedulers<a class="headerlink" href="#module-neural_compressor.compression.pruner.schedulers" title="Permalink to this heading"></a></h1>
+<span id="neural-compressor-compression-pruner-schedulers"></span><h1>neural_compressor.compression.pruner.schedulers<a class="headerlink" href="#module-neural_compressor.compression.pruner.schedulers" title="Link to this heading"></a></h1>
 <p>Scheduler module.</p>
 <section id="classes">
-<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h2>
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#neural_compressor.compression.pruner.schedulers.PruningScheduler" title="neural_compressor.compression.pruner.schedulers.PruningScheduler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PruningScheduler</span></code></a></p></td>
@@ -108,7 +107,7 @@
 </table>
 </section>
 <section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h2>
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#neural_compressor.compression.pruner.schedulers.register_scheduler" title="neural_compressor.compression.pruner.schedulers.register_scheduler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_scheduler</span></code></a>(name)</p></td>
@@ -121,10 +120,10 @@
 </table>
 </section>
 <section id="module-contents">
-<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.schedulers.register_scheduler">
-<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.schedulers.</span></span><span class="sig-name descname"><span class="pre">register_scheduler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/schedulers.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.schedulers.register_scheduler" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.schedulers.</span></span><span class="sig-name descname"><span class="pre">register_scheduler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/schedulers.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.schedulers.register_scheduler" title="Link to this definition"></a></dt>
 <dd><p>Class decorator used to register a Scheduler subclass to the registry.</p>
 <p>Decorator function used before a Scheduler subclass.
 Make sure that the Scheduler class decorated by this function can be registered in SCHEDULERS.</p>
@@ -146,7 +145,7 @@ Make sure that the Scheduler class decorated by this function can be registered 
 
 <dl class="py function">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.schedulers.get_scheduler">
-<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.schedulers.</span></span><span class="sig-name descname"><span class="pre">get_scheduler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/schedulers.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.schedulers.get_scheduler" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.schedulers.</span></span><span class="sig-name descname"><span class="pre">get_scheduler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/schedulers.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.schedulers.get_scheduler" title="Link to this definition"></a></dt>
 <dd><p>Get registered scheduler class.</p>
 <p>Get a scheduler object from SCHEDULERS.</p>
 <dl class="field-list simple">
@@ -161,7 +160,7 @@ Make sure that the Scheduler class decorated by this function can be registered 
 
 <dl class="py class">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.schedulers.PruningScheduler">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.schedulers.</span></span><span class="sig-name descname"><span class="pre">PruningScheduler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/schedulers.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.schedulers.PruningScheduler" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.schedulers.</span></span><span class="sig-name descname"><span class="pre">PruningScheduler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/schedulers.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.schedulers.PruningScheduler" title="Link to this definition"></a></dt>
 <dd><p>Pruning Scheduler.</p>
 <p>The class which defines a sparsity changing process during pruning.
 Mainly contains two types:</p>
@@ -178,7 +177,7 @@ Mainly contains two types:</p>
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.schedulers.PruningScheduler.config">
-<span class="sig-name descname"><span class="pre">config</span></span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/schedulers.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.schedulers.PruningScheduler.config" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">config</span></span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/schedulers.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.schedulers.PruningScheduler.config" title="Link to this definition"></a></dt>
 <dd><p>A config dict object that contains the scheduler information.</p>
 </dd></dl>
 
@@ -186,7 +185,7 @@ Mainly contains two types:</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.schedulers.OneshotScheduler">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.schedulers.</span></span><span class="sig-name descname"><span class="pre">OneshotScheduler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/schedulers.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.schedulers.OneshotScheduler" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.schedulers.</span></span><span class="sig-name descname"><span class="pre">OneshotScheduler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/schedulers.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.schedulers.OneshotScheduler" title="Link to this definition"></a></dt>
 <dd><p>Pruning Scheduler.</p>
 <p>A Scheduler class derived from Scheduler.
 Prune the model to target sparsity once.</p>
@@ -204,7 +203,7 @@ Prune the model to target sparsity once.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="neural_compressor.compression.pruner.schedulers.IterativeScheduler">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.schedulers.</span></span><span class="sig-name descname"><span class="pre">IterativeScheduler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/schedulers.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.schedulers.IterativeScheduler" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neural_compressor.compression.pruner.schedulers.</span></span><span class="sig-name descname"><span class="pre">IterativeScheduler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/neural_compressor/compression/pruner/schedulers.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#neural_compressor.compression.pruner.schedulers.IterativeScheduler" title="Link to this definition"></a></dt>
 <dd><p>Pruning Scheduler.</p>
 <p>A Scheduler class derived from Scheduler.
 Prune the model from dense to target sparsity in several steps.</p>
@@ -237,7 +236,7 @@ Prune the model from dense to target sparsity in several steps.</p>
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   <jinja2.runtime.BlockReference object at 0x7ff52593b760> 
+   <jinja2.runtime.BlockReference object at 0x7f63279ae2f0> 
   <p></p><div><a href='https://www.intel.com/content/www/us/en/privacy/intel-cookie-notice.html' data-cookie-notice='true'>Cookies</a> <a href='https://www.intel.com/content/www/us/en/privacy/intel-privacy-notice.html'>| Privacy</a></div>
 
 

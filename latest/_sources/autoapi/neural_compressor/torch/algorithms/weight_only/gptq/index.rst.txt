@@ -78,7 +78,7 @@ Module Contents
    Print all layers which will be quantized in GPTQ algorithm.
 
 
-.. py:class:: RAWGPTQuantizer(model, weight_config={}, nsamples=128, use_max_length=True, max_seq_length=2048, device=None, use_layer_wise=False, model_path='', dataloader=None, *args, **kwargs)
+.. py:class:: RAWGPTQuantizer(model, weight_config={}, nsamples=128, use_max_length=True, max_seq_length=2048, device=None, use_layer_wise=False, model_path='', quant_lm_head=False, dataloader=None, *args, **kwargs)
 
 
 

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Code Migration from Intel Neural Compressor 1.X to Intel Neural Compressor 2.X &mdash; Intel® Neural Compressor 3.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
-      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-      <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+  <title>Code Migration from Intel Neural Compressor 1.X to Intel Neural Compressor 2.X &mdash; Intel® Neural Compressor 3.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=68dfede1" />
 
   
 <script type="text/javascript">
@@ -88,7 +88,7 @@
            <div itemprop="articleBody">
              
   <section id="code-migration-from-intel-neural-compressor-1-x-to-intel-neural-compressor-2-x">
-<h1>Code Migration from Intel Neural Compressor 1.X to Intel Neural Compressor 2.X<a class="headerlink" href="#code-migration-from-intel-neural-compressor-1-x-to-intel-neural-compressor-2-x" title="Permalink to this heading"></a></h1>
+<h1>Code Migration from Intel Neural Compressor 1.X to Intel Neural Compressor 2.X<a class="headerlink" href="#code-migration-from-intel-neural-compressor-1-x-to-intel-neural-compressor-2-x" title="Link to this heading"></a></h1>
 <p>Intel Neural Compressor is a powerful open-source Python library that runs on Intel CPUs and GPUs, which delivers unified interfaces across multiple deep-learning frameworks for popular network compression technologies such as quantization, pruning, and knowledge distillation. We conduct several changes to our old APIs based on Intel Neural Compressor 1.X to make it more user-friendly and convenient for using. Just some simple steps could upgrade your code from Intel Neural Compressor 1.X to Intel Neural Compressor 2.X.</p>
 <blockquote>
 <div><p>It should be noted that we will stop to support Intel Neural Compressor 1.X in the future.</p>
@@ -103,10 +103,10 @@
 <li><p><a class="reference external" href="#examples">Examples</a></p></li>
 </ol>
 <section id="model-quantization">
-<h2>Model Quantization<a class="headerlink" href="#model-quantization" title="Permalink to this heading"></a></h2>
+<h2>Model Quantization<a class="headerlink" href="#model-quantization" title="Link to this heading"></a></h2>
 <p>Model Quantization is a very popular deep learning model optimization technique designed for improving the speed of model inference, which is a fundamental function in Intel Neural Compressor. There are two model quantization methods, Quantization Aware Training (QAT) and Post-training Quantization (PTQ). Our tool has provided comprehensive supports for these two kinds of model quantization methods in both Intel Neural Compressor 1.X and Intel Neural Compressor 2.X.</p>
 <section id="post-training-quantization">
-<h3>Post-training Quantization<a class="headerlink" href="#post-training-quantization" title="Permalink to this heading"></a></h3>
+<h3>Post-training Quantization<a class="headerlink" href="#post-training-quantization" title="Link to this heading"></a></h3>
 <p>Post-training Quantization is the most easy way to quantize the model from FP32 into INT8 format offline.</p>
 <p><strong>Quantization with Intel Neural Compressor 1.X</strong></p>
 <p>In Intel Neural Compressor 1.X, we resort to a <code class="docutils literal notranslate"><span class="pre">conf.yaml</span></code> to inject the config of the quantization settings.</p>
@@ -210,7 +210,7 @@
 </div>
 </section>
 <section id="quantization-aware-training">
-<h3>Quantization Aware Training<a class="headerlink" href="#quantization-aware-training" title="Permalink to this heading"></a></h3>
+<h3>Quantization Aware Training<a class="headerlink" href="#quantization-aware-training" title="Link to this heading"></a></h3>
 <p>Quantization aware training emulates inference-time quantization in the forward pass of the training process by inserting <code class="docutils literal notranslate"><span class="pre">fake</span> <span class="pre">quant</span></code> ops before those quantizable ops. With <code class="docutils literal notranslate"><span class="pre">quantization</span> <span class="pre">aware</span> <span class="pre">training</span></code>, all weights and activations are <code class="docutils literal notranslate"><span class="pre">fake</span> <span class="pre">quantized</span></code> during both the forward and backward passes of training.</p>
 <p><strong>Quantization with Intel Neural Compressor 1.X</strong></p>
 <p>In Intel Neural Compressor 1.X, the difference between the QAT and PTQ is that we need to define the <code class="docutils literal notranslate"><span class="pre">train_func</span></code> in QAT to emulate the training process. The code is compiled as follows,</p>
@@ -304,7 +304,7 @@
 </section>
 </section>
 <section id="pruning">
-<h2>Pruning<a class="headerlink" href="#pruning" title="Permalink to this heading"></a></h2>
+<h2>Pruning<a class="headerlink" href="#pruning" title="Link to this heading"></a></h2>
 <p>Neural network pruning (briefly known as pruning or sparsity) is one of the most promising model compression techniques. It removes the least important parameters in the network and achieves compact architectures with minimal accuracy drop and maximal inference acceleration.</p>
 <p><strong>Pruning with Intel Neural Compressor 1.X</strong></p>
 <p>In Intel Neural Compressor 1.X, the Pruning config is still defined by an extra <code class="docutils literal notranslate"><span class="pre">conf.yaml</span></code>. The pruning code should be written as:</p>
@@ -438,7 +438,7 @@
 </div>
 </section>
 <section id="distillation">
-<h2>Distillation<a class="headerlink" href="#distillation" title="Permalink to this heading"></a></h2>
+<h2>Distillation<a class="headerlink" href="#distillation" title="Link to this heading"></a></h2>
 <p>Distillation is one of popular approaches of network compression, which transfers knowledge from a large model to a smaller one without loss of validity. As smaller models are less expensive to evaluate, they can be deployed on less powerful hardware (such as a mobile device).</p>
 <p><strong>Distillation with Intel Neural Compressor 1.X</strong></p>
 <p>Intel Neural Compressor distillation API is defined under <code class="docutils literal notranslate"><span class="pre">neural_compressor.experimental.Distillation</span></code>, which takes a user yaml file <code class="docutils literal notranslate"><span class="pre">conf.yaml</span></code> as input.</p>
@@ -563,7 +563,7 @@
 </div>
 </section>
 <section id="mix-precision">
-<h2>Mix Precision<a class="headerlink" href="#mix-precision" title="Permalink to this heading"></a></h2>
+<h2>Mix Precision<a class="headerlink" href="#mix-precision" title="Link to this heading"></a></h2>
 <p>The recent growth of Deep Learning has driven the development of more complex models that require significantly more compute and memory capabilities. Mixed precision training and inference using low precision formats have been developed to reduce compute and bandwidth requirements. Intel Neural Compressor supports BF16 + FP32 mixed precision conversion by MixedPrecision API</p>
 <p><strong>Mix Precision with Intel Neural Compressor 1.X</strong></p>
 <p>The user can add dataloader and metric in <code class="docutils literal notranslate"><span class="pre">conf.yaml</span></code> to execute evaluation.</p>
@@ -641,7 +641,7 @@
 </div>
 </section>
 <section id="orchestration">
-<h2>Orchestration<a class="headerlink" href="#orchestration" title="Permalink to this heading"></a></h2>
+<h2>Orchestration<a class="headerlink" href="#orchestration" title="Link to this heading"></a></h2>
 <p>Intel Neural Compressor supports arbitrary meaningful combinations of supported optimization methods under one-shot or multi-shot, such as pruning during quantization-aware training, or pruning and then post-training quantization, pruning and then distillation and then quantization.</p>
 <p><strong>Orchestration with Intel Neural Compressor 1.X</strong></p>
 <p>Intel Neural Compressor 1.X mainly relies on a <code class="docutils literal notranslate"><span class="pre">Scheduler</span></code> class to automatically pipeline execute model optimization with one shot or multiple shots way.</p>
@@ -690,7 +690,7 @@
 </div>
 </section>
 <section id="benchmark">
-<h2>Benchmark<a class="headerlink" href="#benchmark" title="Permalink to this heading"></a></h2>
+<h2>Benchmark<a class="headerlink" href="#benchmark" title="Link to this heading"></a></h2>
 <p>The benchmarking feature of Neural Compressor is used to measure the model performance with the objective settings. The user can get the performance of the models between the float32 model and the quantized low precision model in a same scenario.</p>
 <p><strong>Benchmark with Intel Neural Compressor 1.X</strong></p>
 <p>In Intel Neural Compressor 1.X requires the user to define the experimental settings for low precision model and FP32 model with a <code class="docutils literal notranslate"><span class="pre">conf.yaml</span></code>.</p>
@@ -763,7 +763,7 @@
 </div>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
 <p>User could refer to <a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/examples/README.html">examples</a> for more details about the migration from Intel Neural Compressor 1.X to Intel Neural Compressor 2.X.</p>
 </section>
 </section>
@@ -782,7 +782,7 @@
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   <jinja2.runtime.BlockReference object at 0x7f415c6a99f0> 
+   <jinja2.runtime.BlockReference object at 0x7f63286e3880> 
   <p></p><div><a href='https://www.intel.com/content/www/us/en/privacy/intel-cookie-notice.html' data-cookie-notice='true'>Cookies</a> <a href='https://www.intel.com/content/www/us/en/privacy/intel-privacy-notice.html'>| Privacy</a></div>
 
 

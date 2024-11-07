@@ -91,9 +91,9 @@ Module Contents
 
    Automatically detects and selects the appropriate accelerator.
 
-   Force use the cpu on node has both cpu and gpu: `FORCE_DEVICE=cpu` python main.py ...
-   The `FORCE_DEVICE` is case insensitive.
-   The environment variable `FORCE_DEVICE` has higher priority than the `device_name`.
+   Force use the cpu on node has both cpu and gpu: `INC_TARGET_DEVICE=cpu` python main.py ...
+   The `INC_TARGET_DEVICE` is case insensitive.
+   The environment variable `INC_TARGET_DEVICE` has higher priority than the `device_name`.
    TODO: refine the docs and logic later
 
 
